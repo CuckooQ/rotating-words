@@ -39,7 +39,7 @@ const positions = [
   [0.5, 0.5, 0.5],
 ];
 
-function Words({ position, text }) {
+function Word({ position, text }) {
   return (
     <mesh position={position}>
       <Text scale={[2, 2, 2]} color={"#EC2D2D"} dashed={true}>
@@ -52,8 +52,8 @@ function Words({ position, text }) {
 function Scene() {
   return (
     <group>
-      {words.map((skill, idx) => {
-        return <Words position={positions[idx]} text={skill} />;
+      {words.map((word, idx) => {
+        return <Word position={positions[idx]} text={word} />;
       })}
     </group>
   );
